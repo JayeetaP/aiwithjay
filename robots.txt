@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://yourusername.github.io/jayeeta-putatunda-portfolio/sitemap.xml
+
+# Block access to sensitive files
+Disallow: /.github/
+Disallow: /docs/
+Disallow: *.json
+Disallow: *.md
+
+# Allow all images
+Allow: /images/
+
+# Allow CSS and JS files
+Allow: /css/
+Allow: /js/
