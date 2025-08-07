@@ -1,31 +1,44 @@
-/* css/style.css - Complete Navy Blue Professional Theme with Beige Background */
+/* 
+==============================================
+JAYEETA PUTATUNDA - PROFESSIONAL PORTFOLIO
+==============================================
+Complete CSS with Navy Blue Professional Theme and Warm Beige Background
+Author: Professional Portfolio Template
+Description: Responsive design with improved readability (Option 1: Darker Text)
+*/
 
+/* 
+==============================================
+CSS VARIABLES & COLOR SCHEME
+==============================================
+Define all colors, gradients, shadows, and design tokens
+*/
 :root {
-    /* Navy Blue High Contrast Color Scheme */
-    --primary: #2B3A67;
-    --primary-dark: #1E2A4A;
-    --accent: #4A6CF7;
-    --accent-light: #7C8EFA;
-    --accent-lighter: #A4B6FC;
+    /* PRIMARY BRAND COLORS - Navy Blue Theme */
+    --primary: #2B3A67;           /* Main navy blue for headers, buttons */
+    --primary-dark: #1E2A4A;      /* Darker navy for hover states */
+    --accent: #4A6CF7;            /* Blue accent for highlights, links */
+    --accent-light: #7C8EFA;      /* Lighter accent for gradients */
+    --accent-lighter: #A4B6FC;    /* Very light accent for tags, badges */
     
-    /* Warm beige backgrounds */
-    --warm-background: #FEFBF7;
-    --soft-beige: #F7F4F0;
-    --card-white: #FFFFFF;
-    --light-gray: #F8F9FB;
-    --soft-gray: #E2E8F0;
-    --medium-gray: #CBD5E0;
-    --border-gray: #E2E8F0;
+    /* BACKGROUND COLORS - Warm Beige Palette */
+    --warm-background: #FEFBF7;   /* Main page background - warm off-white */
+    --soft-beige: #F7F4F0;        /* Section backgrounds - soft beige */
+    --card-white: #FFFFFF;        /* Card backgrounds - pure white */
+    --light-gray: #F8F9FB;        /* Light elements, placeholders */
+    --soft-gray: #E2E8F0;         /* Subtle dividers, borders */
+    --medium-gray: #CBD5E0;       /* Medium contrast elements */
+    --border-gray: #E2E8F0;       /* Border color for cards, inputs */
     
-    /* High contrast text colors */
-    --text-dark: #1A202C;
-    --text-medium: #2D3748;
-    --text-light: #4A5568;
-    --text-lighter: #718096;
+    /* TEXT COLORS - Improved Readability (Option 1: Darker Text) */
+    --text-dark: #0D1117;         /* Main headings - very dark for readability */
+    --text-medium: #1A202C;       /* Body text - dark for good contrast */
+    --text-light: #2D3748;        /* Secondary text - readable gray */
+    --text-lighter: #4A5568;      /* Meta text, captions - lighter but readable */
     
-    /* Grays with better contrast */
+    /* GRAY SCALE SYSTEM - Consistent grays for various UI elements */
     --dark: #1A202C;
-    --gray-900: #1A202C;
+    --gray-900: #1A202C;          /* Darkest gray */
     --gray-800: #2D3748;
     --gray-700: #4A5568;
     --gray-600: #718096;
@@ -34,144 +47,170 @@
     --gray-300: #E2E8F0;
     --gray-200: #EDF2F7;
     --gray-100: #F7FAFC;
-    --gray-50: #F7F9FC;
+    --gray-50: #F7F9FC;           /* Lightest gray */
     --white: #FFFFFF;
     
-    /* Updated gradients */
+    /* GRADIENT DEFINITIONS - Used for buttons, headers, decorative elements */
     --gradient: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
     --gradient-soft: linear-gradient(135deg, var(--light-gray) 0%, var(--card-white) 100%);
     --gradient-accent: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
     
-    /* Shadows with navy tint */
-    --shadow-sm: 0 1px 2px 0 rgba(43, 58, 103, 0.1);
-    --shadow: 0 4px 6px -1px rgba(43, 58, 103, 0.15);
-    --shadow-lg: 0 10px 15px -3px rgba(43, 58, 103, 0.2);
-    --shadow-xl: 0 20px 25px -5px rgba(43, 58, 103, 0.25);
+    /* SHADOW SYSTEM - Consistent depth with navy tint */
+    --shadow-sm: 0 1px 2px 0 rgba(43, 58, 103, 0.1);      /* Small shadow for subtle depth */
+    --shadow: 0 4px 6px -1px rgba(43, 58, 103, 0.15);      /* Standard shadow for cards */
+    --shadow-lg: 0 10px 15px -3px rgba(43, 58, 103, 0.2);  /* Large shadow for prominent elements */
+    --shadow-xl: 0 20px 25px -5px rgba(43, 58, 103, 0.25); /* Extra large shadow for hero elements */
 }
 
+/* 
+==============================================
+GLOBAL RESET & BASE STYLES
+==============================================
+Reset default browser styles and set foundation
+*/
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0;                    /* Remove default margins */
+    padding: 0;                   /* Remove default padding */
+    box-sizing: border-box;       /* Include padding/border in element width/height */
 }
 
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: smooth;      /* Smooth scrolling for anchor links */
 }
 
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    line-height: 1.6;
-    color: var(--text-medium);
-    background: var(--warm-background);
-    overflow-x: hidden;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; /* Modern font stack */
+    line-height: 1.6;             /* Comfortable line spacing for readability */
+    color: var(--text-medium);    /* Default text color */
+    background: var(--warm-background); /* Warm beige background */
+    overflow-x: hidden;           /* Prevent horizontal scrolling */
 }
 
+/* CONTAINER - Centers content with consistent max-width */
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
+    max-width: 1200px;            /* Maximum content width */
+    margin: 0 auto;               /* Center horizontally */
+    padding: 0 1rem;              /* Side padding for mobile spacing */
 }
 
-/* Typography */
+/* 
+==============================================
+TYPOGRAPHY UTILITIES
+==============================================
+Font families and text alignment rules
+*/
 .mono {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'JetBrains Mono', monospace; /* Monospace font for code elements */
 }
 
-/* General paragraph justification */
+/* PARAGRAPH JUSTIFICATION - Justified text for better readability */
 p {
-    text-align: justify;
+    text-align: justify;          /* Justify text for clean edges */
 }
 
-/* Exception: Keep centered text centered */
+/* EXCEPTIONS - Keep certain elements center-aligned */
 .section-header p,
 .hero-card p,
 .stat-label,
 .about-stat-label,
 .footer p {
-    text-align: center !important;
+    text-align: center !important; /* Override justify for centered content */
 }
 
-/* Exception: Keep meta information left-aligned */
+/* EXCEPTIONS - Keep meta information left-aligned */
 .speaking-meta,
 .blog-meta,
 .advisory-organization,
 .timeline-year {
-    text-align: left !important;
+    text-align: left !important;   /* Override justify for meta content */
 }
 
-/* Navigation */
+/* 
+==============================================
+NAVIGATION BAR
+==============================================
+Fixed top navigation with backdrop blur and smooth transitions
+*/
 .nav {
-    position: fixed;
+    position: fixed;               /* Fixed to top of viewport */
     top: 0;
     width: 100%;
-    background: rgba(254, 251, 247, 0.95);
-    backdrop-filter: blur(20px);
-    border-bottom: 1px solid var(--border-gray);
-    z-index: 1000;
-    transition: all 0.3s ease;
+    background: rgba(254, 251, 247, 0.95); /* Semi-transparent warm background */
+    backdrop-filter: blur(20px);   /* Modern blur effect for depth */
+    border-bottom: 1px solid var(--border-gray); /* Subtle bottom border */
+    z-index: 1000;                 /* Above all other content */
+    transition: all 0.3s ease;     /* Smooth transitions on scroll */
 }
 
+/* SCROLLED STATE - Enhanced background when scrolled */
 .nav.scrolled {
-    background: rgba(254, 251, 247, 0.98);
-    box-shadow: var(--shadow);
+    background: rgba(254, 251, 247, 0.98); /* More opaque when scrolled */
+    box-shadow: var(--shadow);     /* Add shadow when scrolled */
 }
 
+/* NAVIGATION CONTENT WRAPPER */
 .nav-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Logo left, links right */
     align-items: center;
     padding: 1rem;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 0 auto;                /* Center within viewport */
 }
 
+/* LOGO STYLING */
 .logo {
-    font-weight: 700;
-    font-size: 1.5rem;
-    color: var(--primary);
-    letter-spacing: -0.02em;
+    font-weight: 700;              /* Bold font weight */
+    font-size: 1.5rem;             /* Prominent size */
+    color: var(--primary);         /* Navy brand color */
+    letter-spacing: -0.02em;       /* Tight letter spacing */
 }
 
+/* NAVIGATION LINKS CONTAINER */
 .nav-links {
     display: flex;
-    list-style: none;
-    gap: 2rem;
+    list-style: none;              /* Remove bullet points */
+    gap: 2rem;                     /* Space between links */
     align-items: center;
 }
 
+/* INDIVIDUAL NAVIGATION LINKS */
 .nav-link {
-    text-decoration: none;
-    color: var(--text-light);
-    font-weight: 500;
-    font-size: 0.9rem;
-    transition: color 0.2s ease;
-    position: relative;
+    text-decoration: none;         /* Remove underline */
+    color: var(--text-light);      /* Readable gray color */
+    font-weight: 500;              /* Medium weight */
+    font-size: 0.9rem;             /* Slightly smaller than body text */
+    transition: color 0.2s ease;   /* Smooth color transitions */
+    position: relative;            /* For pseudo-element positioning */
 }
 
+/* NAVIGATION LINK HOVER & ACTIVE STATES */
 .nav-link:hover,
 .nav-link.active {
-    color: var(--primary);
+    color: var(--primary);         /* Navy color on hover/active */
 }
 
+/* NAVIGATION LINK UNDERLINE EFFECT */
 .nav-link::after {
-    content: '';
+    content: '';                   /* Empty pseudo-element */
     position: absolute;
-    bottom: -0.25rem;
+    bottom: -0.25rem;              /* Position below text */
     left: 0;
-    width: 0;
-    height: 2px;
-    background: var(--accent);
-    transition: width 0.2s ease;
+    width: 0;                      /* Start with no width */
+    height: 2px;                   /* Thin line */
+    background: var(--accent);     /* Blue accent color */
+    transition: width 0.2s ease;   /* Animate width change */
 }
 
+/* SHOW UNDERLINE ON HOVER/ACTIVE */
 .nav-link:hover::after,
 .nav-link.active::after {
-    width: 100%;
+    width: 100%;                   /* Full width underline */
 }
 
+/* MOBILE MENU TOGGLE - Hidden on desktop */
 .menu-toggle {
-    display: none;
+    display: none;                 /* Hidden by default */
     background: none;
     border: none;
     font-size: 1.5rem;
@@ -179,1113 +218,1315 @@ p {
     color: var(--text-light);
 }
 
-/* Hero Section */
+/* 
+==============================================
+HERO SECTION
+==============================================
+Main landing section with profile card and intro content
+*/
 .hero {
-    min-height: 100vh;
+    min-height: 100vh;             /* Full viewport height */
     display: flex;
-    align-items: center;
-    padding: 6rem 0 4rem;
-    background: var(--soft-beige);
-    position: relative;
-    overflow: hidden;
+    align-items: center;           /* Vertically center content */
+    padding: 6rem 0 4rem;          /* Top padding accounts for fixed nav */
+    background: var(--soft-beige); /* Soft beige background */
+    position: relative;            /* For pseudo-element positioning */
+    overflow: hidden;              /* Hide decorative overflow */
 }
 
+/* DECORATIVE BACKGROUND GRADIENT */
 .hero::before {
     content: '';
     position: absolute;
     top: 0;
-    right: -30%;
+    right: -30%;                   /* Extend beyond container */
     width: 60%;
     height: 100%;
     background: radial-gradient(circle, rgba(74, 108, 247, 0.08) 0%, transparent 70%);
-    pointer-events: none;
+    pointer-events: none;          /* Don't interfere with interactions */
 }
 
+/* HERO CONTENT GRID - Two column layout */
 .hero-content {
     display: grid;
-    grid-template-columns: 1fr 450px;
-    gap: 4rem;
-    align-items: center;
+    grid-template-columns: 1fr 450px; /* Text content + profile card */
+    gap: 4rem;                     /* Large gap between columns */
+    align-items: center;           /* Vertically align items */
     position: relative;
-    z-index: 2;
+    z-index: 2;                    /* Above background decoration */
 }
 
+/* TEXT CONTENT COLUMN */
 .hero-text {
-    max-width: 600px;
+    max-width: 600px;              /* Limit line length for readability */
 }
 
+/* AWARD BADGE - Highlighted achievement */
 .hero-label {
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
-    background: var(--gradient);
+    gap: 0.5rem;                   /* Space between icon and text */
+    background: var(--gradient);   /* Brand gradient background */
     color: white;
     padding: 0.5rem 1rem;
-    border-radius: 2rem;
+    border-radius: 2rem;           /* Pill shape */
     font-size: 0.75rem;
     font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
+    text-transform: uppercase;     /* All caps for emphasis */
+    letter-spacing: 0.05em;        /* Spaced out letters */
     margin-bottom: 1.5rem;
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow);     /* Depth with shadow */
 }
 
+/* MAIN HERO TITLE */
 .hero-title {
-    font-size: 3.5rem;
-    font-weight: 700;
-    line-height: 1.1;
+    font-size: 3.5rem;             /* Large, attention-grabbing size */
+    font-weight: 700;              /* Bold weight */
+    line-height: 1.1;              /* Tight line height for impact */
     margin-bottom: 1rem;
-    color: var(--text-dark);
-    letter-spacing: -0.02em;
+    color: var(--text-dark);       /* Darkest text for readability */
+    letter-spacing: -0.02em;       /* Slightly tighter spacing */
 }
 
+/* HERO SUBTITLE */
 .hero-subtitle {
     font-size: 1.1rem;
-    color: var(--accent);
+    color: var(--accent);          /* Blue accent color */
     margin-bottom: 1rem;
     font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.02em;
+    text-transform: uppercase;     /* All caps for style */
+    letter-spacing: 0.02em;        /* Spaced letters */
 }
 
+/* HERO DESCRIPTION PARAGRAPHS */
 .hero-description {
     font-size: 1rem;
-    color: var(--text-light);
+    color: var(--text-light);      /* Readable gray */
     margin-bottom: 2rem;
-    line-height: 1.7;
-    text-align: justify;
+    line-height: 1.7;              /* Generous line height */
+    text-align: justify;           /* Clean paragraph edges */
 }
 
+/* STATISTICS ROW - Key numbers display */
 .hero-stats {
     display: flex;
-    gap: 2rem;
+    gap: 2rem;                     /* Space between stat items */
     margin-bottom: 2rem;
 }
 
+/* INDIVIDUAL STAT ITEM */
 .stat-item {
     text-align: center;
-    background: var(--card-white);
+    background: var(--card-white); /* White card background */
     padding: 1.5rem;
-    border-radius: 1rem;
-    box-shadow: var(--shadow-sm);
-    border: 1px solid var(--border-gray);
-    transition: all 0.2s ease;
+    border-radius: 1rem;           /* Rounded corners */
+    box-shadow: var(--shadow-sm);  /* Subtle shadow */
+    border: 1px solid var(--border-gray); /* Light border */
+    transition: all 0.2s ease;     /* Smooth hover effects */
 }
 
+/* STAT ITEM HOVER EFFECT */
 .stat-item:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow);
+    transform: translateY(-2px);   /* Slight upward movement */
+    box-shadow: var(--shadow);     /* Enhanced shadow */
 }
 
+/* STAT NUMBER - Large prominent number */
 .stat-number {
     display: block;
-    font-size: 1.875rem;
-    font-weight: 700;
-    color: var(--accent);
-    line-height: 1;
+    font-size: 1.875rem;           /* Large size for impact */
+    font-weight: 700;              /* Bold weight */
+    color: var(--accent);          /* Blue accent color */
+    line-height: 1;                /* Tight line height */
 }
 
+/* STAT LABEL - Description text */
 .stat-label {
-    font-size: 0.75rem;
-    color: var(--text-lighter);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
+    font-size: 0.75rem;            /* Small descriptive text */
+    color: var(--text-lighter);    /* Light gray */
+    text-transform: uppercase;     /* All caps */
+    letter-spacing: 0.05em;        /* Spaced letters */
     margin-top: 0.25rem;
 }
 
+/* CALL-TO-ACTION BUTTONS */
 .hero-cta {
     display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
+    gap: 1rem;                     /* Space between buttons */
+    flex-wrap: wrap;               /* Wrap on small screens */
 }
 
+/* 
+==============================================
+BUTTON COMPONENTS
+==============================================
+Reusable button styles with variants
+*/
 .btn {
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.5rem;                   /* Space between icon and text */
     padding: 0.75rem 1.5rem;
-    border-radius: 0.5rem;
+    border-radius: 0.5rem;         /* Rounded corners */
     font-weight: 600;
     font-size: 0.875rem;
-    text-decoration: none;
-    transition: all 0.2s ease;
+    text-decoration: none;         /* Remove link underline */
+    transition: all 0.2s ease;     /* Smooth hover effects */
     border: none;
     cursor: pointer;
 }
 
+/* PRIMARY BUTTON - Main action button */
 .btn-primary {
-    background: var(--primary);
+    background: var(--primary);    /* Navy background */
     color: white;
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow);     /* Depth with shadow */
 }
 
 .btn-primary:hover {
-    background: var(--primary-dark);
-    transform: translateY(-1px);
-    box-shadow: var(--shadow-lg);
+    background: var(--primary-dark); /* Darker on hover */
+    transform: translateY(-1px);   /* Slight lift effect */
+    box-shadow: var(--shadow-lg);  /* Enhanced shadow */
 }
 
+/* SECONDARY BUTTON - Alternative action */
 .btn-secondary {
-    background: var(--card-white);
-    color: var(--primary);
-    border: 2px solid var(--primary);
+    background: var(--card-white); /* White background */
+    color: var(--primary);         /* Navy text */
+    border: 2px solid var(--primary); /* Navy border */
 }
 
 .btn-secondary:hover {
-    background: var(--primary);
+    background: var(--primary);    /* Filled on hover */
     color: white;
 }
 
+/* 
+==============================================
+HERO PROFILE CARD
+==============================================
+Right-side profile card with image and social links
+*/
 .hero-image {
     position: relative;
-    width: 450px;
-    height: 550px;
-    margin: 0 auto;
+    width: 450px;                  /* Large card width */
+    height: 550px;                 /* Tall card height */
+    margin: 0 auto;                /* Center if space allows */
 }
 
+/* PROFILE CARD CONTAINER */
 .hero-card {
-    background: var(--card-white);
-    border-radius: 1rem;
-    padding: 3rem;
-    box-shadow: var(--shadow-lg);
+    background: var(--card-white); /* White background */
+    border-radius: 1rem;           /* Rounded corners */
+    padding: 3rem;                 /* Generous padding */
+    box-shadow: var(--shadow-lg);  /* Prominent shadow */
     text-align: center;
     position: relative;
-    overflow: hidden;
+    overflow: hidden;              /* Hide decorative overflow */
     border: 1px solid var(--border-gray);
-    height: 100%;
+    height: 100%;                  /* Full container height */
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center;       /* Center content vertically */
 }
 
+/* CARD TOP ACCENT LINE */
 .hero-card::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    height: 4px;
-    background: var(--gradient);
+    height: 4px;                   /* Thin accent line */
+    background: var(--gradient);   /* Brand gradient */
 }
 
+/* PROFILE IMAGE - Large circular photo */
 .profile-image {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    margin: 0 auto 2rem;
-    background: var(--light-gray);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 4rem;
-    font-weight: 700;
-    color: var(--accent);
-    box-shadow: var(--shadow);
-    border: 4px solid var(--card-white);
-    overflow: hidden;
-    position: relative;
+    width: 240px;                  /* Increased from 200px */
+    height: 240px;                 /* Square shape */
+    border-radius: 1rem;           /* Square with rounded corners */
+    margin: 0 auto 1.5rem;         /* Reduced bottom margin */
 }
 
+/* ACTUAL PROFILE IMAGE */
 .profile-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 50%;
+    object-fit: cover;             /* Crop to fill circle */
+    object-position: center;       /* Center the crop */
+    border-radius: 50%;            /* Maintain circle shape */
 }
 
+/* PROFILE NAME */
 .hero-card h2 {
-    font-size: 2rem;
+    font-size: 2rem;               /* Large name text */
     font-weight: 700;
-    color: var(--text-dark);
+    color: var(--text-dark);       /* Dark for readability */
     margin-bottom: 1rem;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.01em;       /* Slightly tighter spacing */
 }
 
+/* PROFILE TITLE/SUBTITLE */
 .hero-card .subtitle {
-    color: var(--text-light);
-    font-size: 1.125rem;
+    color: var(--text-light);      /* Readable gray */
+    font-size: 1.125rem;           /* Medium size */
     font-weight: 500;
     margin-bottom: 2rem;
-    text-transform: uppercase;
-    letter-spacing: 0.02em;
+    text-transform: uppercase;     /* All caps style */
+    letter-spacing: 0.02em;        /* Spaced letters */
 }
 
+/* SOCIAL MEDIA LINKS */
 .social-links {
     display: flex;
-    justify-content: center;
-    gap: 1.5rem;
+    justify-content: center;       /* Center the links */
+    gap: 1.5rem;                   /* Space between icons */
     margin-top: 2.5rem;
 }
 
+/* INDIVIDUAL SOCIAL LINK */
 .social-link {
-    width: 3.5rem;
+    width: 3.5rem;                 /* Large circular buttons */
     height: 3.5rem;
-    background: var(--light-gray);
-    border-radius: 50%;
+    background: var(--light-gray); /* Light background */
+    border-radius: 50%;            /* Circular shape */
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--text-light);
+    color: var(--text-light);      /* Gray icon color */
     text-decoration: none;
-    transition: all 0.2s ease;
+    transition: all 0.2s ease;     /* Smooth hover effects */
     border: 1px solid var(--border-gray);
-    font-size: 1.25rem;
+    font-size: 1.25rem;            /* Large icons */
 }
 
+/* SOCIAL LINK HOVER EFFECT */
 .social-link:hover {
-    background: var(--accent);
-    color: white;
-    transform: translateY(-2px);
-    box-shadow: var(--shadow);
+    background: var(--accent);     /* Blue background on hover */
+    color: white;                  /* White icon on hover */
+    transform: translateY(-2px);   /* Slight lift effect */
+    box-shadow: var(--shadow);     /* Shadow on hover */
 }
 
-/* Section Styles */
+/* 
+==============================================
+SECTION FOUNDATIONS
+==============================================
+Base styles for all content sections
+*/
 .section {
-    padding: 5rem 0;
+    padding: 5rem 0;               /* Generous vertical padding */
 }
 
+/* SECTION HEADER - Title and subtitle for each section */
 .section-header {
     text-align: center;
-    max-width: 600px;
-    margin: 0 auto 4rem;
+    max-width: 600px;              /* Limit width for readability */
+    margin: 0 auto 4rem;           /* Center with bottom margin */
 }
 
+/* SECTION TITLE */
 .section-title {
-    font-size: 2.5rem;
+    font-size: 2.5rem;             /* Large section heading */
     font-weight: 700;
     margin-bottom: 1rem;
-    color: var(--text-dark);
-    letter-spacing: -0.02em;
+    color: var(--text-dark);       /* Dark for readability */
+    letter-spacing: -0.02em;       /* Slightly tighter spacing */
 }
 
+/* SECTION SUBTITLE */
 .section-subtitle {
-    font-size: 1.125rem;
-    color: var(--text-light);
-    line-height: 1.6;
-    text-align: justify;
+    font-size: 1.125rem;           /* Medium descriptive text */
+    color: var(--text-light);      /* Readable gray */
+    line-height: 1.6;              /* Comfortable line spacing */
+    text-align: justify;           /* Clean paragraph edges */
 }
 
-/* About Section - Improved Layout */
+/* 
+==============================================
+ABOUT SECTION
+==============================================
+Personal story and background information
+*/
 .about {
-    background: var(--warm-background);
+    background: var(--warm-background); /* Warm beige background */
 }
 
+/* ABOUT CONTENT WRAPPER */
 .about-content {
     display: block;
-    max-width: 900px;
-    margin: 0 auto;
+    max-width: 900px;              /* Readable content width */
+    margin: 0 auto;                /* Center the content */
 }
 
+/* ABOUT TEXT CONTENT */
 .about-text {
     margin-bottom: 3rem;
 }
 
+/* ABOUT SECTION HEADINGS */
 .about-text h3 {
     font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    color: var(--text-dark);
+    color: var(--text-dark);       /* Dark for readability */
 }
 
+/* ABOUT PARAGRAPHS */
 .about-text p {
     margin-bottom: 1.5rem;
-    color: var(--text-light);
-    line-height: 1.7;
-    text-align: justify;
+    color: var(--text-light);      /* Readable gray */
+    line-height: 1.7;              /* Generous line height */
+    text-align: justify;           /* Clean edges */
 }
 
+/* HIGHLIGHT BOX - Featured quote or callout */
 .highlight-box {
-    background: var(--card-white);
+    background: var(--card-white); /* White background */
     padding: 2rem;
-    border-radius: 1rem;
-    box-shadow: var(--shadow);
-    border-left: 4px solid var(--accent);
+    border-radius: 1rem;           /* Rounded corners */
+    box-shadow: var(--shadow);     /* Depth with shadow */
+    border-left: 4px solid var(--accent); /* Blue accent border */
     margin: 2rem 0;
     border: 1px solid var(--border-gray);
 }
 
+/* QUOTE TEXT WITHIN HIGHLIGHT BOX */
 .highlight-box .quote {
-    font-size: 1.125rem;
-    font-style: italic;
-    color: var(--text-medium);
+    font-size: 1.125rem;           /* Slightly larger text */
+    font-style: italic;            /* Italic for emphasis */
+    color: var(--text-medium);     /* Medium gray */
     margin-bottom: 1rem;
     text-align: justify;
 }
 
+/* QUOTE AUTHOR/ATTRIBUTION */
 .highlight-box .author {
-    font-size: 0.875rem;
-    color: var(--text-lighter);
+    font-size: 0.875rem;           /* Smaller attribution text */
+    color: var(--text-lighter);    /* Light gray */
     font-weight: 500;
 }
 
+/* ABOUT STATISTICS GRID */
 .about-stats {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
+    grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+    gap: 1.5rem;                   /* Space between items */
     margin-top: 2rem;
     max-width: 800px;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: auto;            /* Center the grid */
 }
 
+/* INDIVIDUAL ABOUT STAT CARD */
 .about-stat {
-    background: var(--card-white);
+    background: var(--card-white); /* White background */
     padding: 1.5rem;
-    border-radius: 1rem;
-    box-shadow: var(--shadow-sm);
+    border-radius: 1rem;           /* Rounded corners */
+    box-shadow: var(--shadow-sm);  /* Subtle shadow */
     text-align: center;
     border: 1px solid var(--border-gray);
-    transition: all 0.2s ease;
+    transition: all 0.2s ease;     /* Smooth hover effects */
 }
 
 .about-stat:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow);
+    transform: translateY(-2px);   /* Slight lift on hover */
+    box-shadow: var(--shadow);     /* Enhanced shadow */
 }
 
+/* STAT NUMBER IN ABOUT SECTION */
 .about-stat-number {
-    font-size: 1.25rem;
+    font-size: 1.25rem;            /* Prominent number */
     font-weight: 700;
-    color: var(--accent);
+    color: var(--accent);          /* Blue accent color */
     margin-bottom: 0.25rem;
 }
 
+/* STAT LABEL IN ABOUT SECTION */
 .about-stat-label {
-    font-size: 0.75rem;
-    color: var(--text-lighter);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
+    font-size: 0.75rem;            /* Small descriptive text */
+    color: var(--text-lighter);    /* Light gray */
+    text-transform: uppercase;     /* All caps */
+    letter-spacing: 0.05em;        /* Spaced letters */
 }
 
-/* Expertise Section */
+/* 
+==============================================
+EXPERTISE SECTION
+==============================================
+Skills and technical capabilities showcase
+*/
 .expertise {
-    background: var(--soft-beige);
+    background: var(--soft-beige); /* Soft beige background */
 }
 
+/* EXPERTISE GRID LAYOUT */
 .expertise-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 1.5rem;                   /* Space between cards */
 }
 
+/* INDIVIDUAL EXPERTISE CARD */
 .expertise-card {
-    background: var(--card-white);
+    background: var(--card-white); /* White background */
     padding: 2rem;
-    border-radius: 1rem;
-    box-shadow: var(--shadow);
-    transition: all 0.2s ease;
+    border-radius: 1rem;           /* Rounded corners */
+    box-shadow: var(--shadow);     /* Depth with shadow */
+    transition: all 0.2s ease;     /* Smooth hover effects */
     border: 1px solid var(--border-gray);
 }
 
+/* EXPERTISE CARD HOVER EFFECT */
 .expertise-card:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-lg);
-    border-color: var(--accent);
+    transform: translateY(-3px);   /* Lift effect */
+    box-shadow: var(--shadow-lg);  /* Enhanced shadow */
+    border-color: var(--accent);   /* Blue border on hover */
 }
 
+/* EXPERTISE ICON - Colored icon container */
 .expertise-icon {
     width: 3rem;
     height: 3rem;
-    background: var(--gradient);
-    border-radius: 0.75rem;
+    background: var(--gradient);   /* Brand gradient background */
+    border-radius: 0.75rem;        /* Rounded square */
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 1rem;
-    box-shadow: var(--shadow-sm);
+    box-shadow: var(--shadow-sm);  /* Subtle shadow */
 }
 
 .expertise-icon i {
-    font-size: 1.25rem;
-    color: white;
+    font-size: 1.25rem;            /* Icon size */
+    color: white;                  /* White icon on gradient */
 }
 
+/* EXPERTISE CARD TITLE */
 .expertise-card h3 {
     font-size: 1.125rem;
     font-weight: 700;
     margin-bottom: 0.75rem;
-    color: var(--text-dark);
+    color: var(--text-dark);       /* Dark for readability */
 }
 
+/* EXPERTISE CARD DESCRIPTION */
 .expertise-card p {
     font-size: 0.875rem;
-    color: var(--text-light);
+    color: var(--text-light);      /* Readable gray */
     margin-bottom: 1rem;
-    line-height: 1.6;
-    text-align: justify;
+    line-height: 1.6;              /* Comfortable spacing */
+    text-align: justify;           /* Clean edges */
 }
 
+/* TECHNOLOGY TAGS CONTAINER */
 .tech-tags {
     display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
+    flex-wrap: wrap;               /* Wrap tags to new lines */
+    gap: 0.5rem;                   /* Space between tags */
 }
 
+/* INDIVIDUAL TECHNOLOGY TAG */
 .tech-tag {
-    background: var(--accent-lighter);
-    color: var(--primary-dark);
+    background: var(--accent-lighter); /* Light blue background */
+    color: var(--primary-dark);    /* Dark navy text */
     padding: 0.25rem 0.75rem;
-    border-radius: 1rem;
-    font-size: 0.75rem;
+    border-radius: 1rem;           /* Pill shape */
+    font-size: 0.75rem;            /* Small text */
     font-weight: 500;
     border: 1px solid var(--medium-gray);
 }
 
-/* Speaking Section */
+/* 
+==============================================
+SPEAKING SECTION
+==============================================
+Conference talks and speaking engagements
+*/
 .speaking {
-    background: var(--warm-background);
+    background: var(--warm-background); /* Warm beige background */
 }
 
+/* YEARLY GROUPING OF SPEAKING EVENTS */
 .year-section {
-    margin-bottom: 3rem;
+    margin-bottom: 3rem;           /* Space between year groups */
 }
 
+/* YEAR HEADER WITH DECORATIVE LINE */
 .year-header {
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--primary);
+    color: var(--primary);         /* Navy color */
     margin-bottom: 1.5rem;
     display: flex;
     align-items: center;
     gap: 1rem;
 }
 
+/* DECORATIVE LINE AFTER YEAR */
 .year-header::after {
     content: '';
-    flex: 1;
+    flex: 1;                       /* Fill remaining space */
     height: 2px;
     background: linear-gradient(to right, var(--accent), transparent);
 }
 
+/* SPEAKING EVENTS GRID */
 .speaking-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Responsive grid */
+    gap: 1.5rem;                   /* Space between cards */
 }
 
+/* INDIVIDUAL SPEAKING EVENT CARD */
 .speaking-card {
-    background: var(--card-white);
-    border-radius: 1rem;
-    overflow: hidden;
-    box-shadow: var(--shadow);
-    transition: all 0.2s ease;
+    background: var(--card-white); /* White background */
+    border-radius: 1rem;           /* Rounded corners */
+    overflow: hidden;              /* Hide overflow for clean edges */
+    box-shadow: var(--shadow);     /* Depth with shadow */
+    transition: all 0.2s ease;     /* Smooth hover effects */
     border: 1px solid var(--border-gray);
 }
 
+/* SPEAKING CARD HOVER EFFECT */
 .speaking-card:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-lg);
+    transform: translateY(-3px);   /* Lift effect */
+    box-shadow: var(--shadow-lg);  /* Enhanced shadow */
 }
 
+/* SPEAKING EVENT IMAGE/ICON AREA */
 .speaking-images {
-    height: 180px;
-    background: var(--gradient);
+    height: 180px;                 /* Fixed height for consistency */
+    background: var(--gradient);   /* Brand gradient background */
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
-    font-size: 2.5rem;
+    font-size: 2.5rem;             /* Large icon */
 }
 
+/* SPEAKING CARD CONTENT AREA */
 .speaking-content {
-    padding: 1.5rem;
+    padding: 1.5rem;               /* Internal spacing */
 }
 
+/* SPEAKING EVENT TITLE */
 .speaking-title {
     font-size: 1.125rem;
     font-weight: 700;
     margin-bottom: 0.75rem;
-    color: var(--text-dark);
+    color: var(--text-dark);       /* Dark for readability */
 }
 
+/* SPEAKING EVENT DESCRIPTION */
 .speaking-description {
     font-size: 0.875rem;
-    color: var(--text-light);
-    line-height: 1.6;
+    color: var(--text-light);      /* Readable gray */
+    line-height: 1.6;              /* Comfortable spacing */
     margin-bottom: 1rem;
-    text-align: justify;
+    text-align: justify;           /* Clean edges */
 }
 
+/* SPEAKING EVENT META INFO - Conference name and links */
 .speaking-meta {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Spread conference name and link */
     align-items: center;
-    font-size: 0.75rem;
-    color: var(--text-lighter);
+    font-size: 0.75rem;            /* Small meta text */
+    color: var(--text-lighter);    /* Light gray */
 }
 
+/* SPEAKING EVENT LINK */
 .speaking-link {
-    color: var(--accent);
+    color: var(--accent);          /* Blue accent color */
     text-decoration: none;
     font-weight: 600;
     display: flex;
     align-items: center;
-    gap: 0.25rem;
+    gap: 0.25rem;                  /* Space between text and icon */
 }
 
 .speaking-link:hover {
-    text-decoration: underline;
+    text-decoration: underline;    /* Underline on hover */
 }
 
-/* Advisory Section */
+/* 
+==============================================
+ADVISORY SECTION
+==============================================
+Advisory roles, mentorship, and organizational involvement
+*/
 .advisory {
-    background: var(--soft-beige);
+    background: var(--soft-beige); /* Soft beige background */
 }
 
+/* ADVISORY CONTENT CONTAINER */
 .advisory-container {
     display: grid;
-    gap: 3rem;
+    gap: 3rem;                     /* Space between sections */
 }
 
+/* ADVISORY ROLES GRID LAYOUT */
 .advisory-row {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Responsive grid */
+    gap: 2rem;                     /* Space between cards */
 }
 
+/* INDIVIDUAL ADVISORY CARD */
 .advisory-card {
-    background: var(--card-white);
-    border-radius: 1rem;
+    background: var(--card-white); /* White background */
+    border-radius: 1rem;           /* Rounded corners */
     padding: 2rem;
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow);     /* Depth with shadow */
     border: 1px solid var(--border-gray);
-    transition: all 0.2s ease;
+    transition: all 0.2s ease;     /* Smooth hover effects */
     position: relative;
-    overflow: hidden;
+    overflow: hidden;              /* Hide decorative overflow */
 }
 
+/* ADVISORY CARD TOP ACCENT LINE */
 .advisory-card::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    height: 4px;
-    background: var(--gradient);
+    height: 4px;                   /* Thin accent line */
+    background: var(--gradient);   /* Brand gradient */
 }
 
+/* ADVISORY CARD HOVER EFFECT */
 .advisory-card:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-lg);
-    border-color: var(--accent);
+    transform: translateY(-3px);   /* Lift effect */
+    box-shadow: var(--shadow-lg);  /* Enhanced shadow */
+    border-color: var(--accent);   /* Blue border on hover */
 }
 
+/* ADVISORY CARD HEADER - Logo and title area */
 .advisory-header {
     display: flex;
-    align-items: flex-start;
-    gap: 1rem;
+    align-items: flex-start;       /* Align to top for multi-line titles */
+    gap: 1rem;                     /* Space between logo and text */
     margin-bottom: 1.5rem;
 }
 
+/* ADVISORY ORGANIZATION LOGO/ICON */
 .advisory-image {
     width: 60px;
     height: 60px;
-    border-radius: 0.75rem;
-    background: var(--light-gray);
+    border-radius: 0.75rem;        /* Rounded square */
+    background: var(--light-gray); /* Light background for placeholder */
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-shrink: 0;
-    overflow: hidden;
+    flex-shrink: 0;                /* Don't shrink with content */
+    overflow: hidden;              /* Crop images cleanly */
     border: 2px solid var(--border-gray);
 }
 
 .advisory-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover;             /* Crop to fill container */
 }
 
 .advisory-image i {
-    font-size: 1.5rem;
-    color: var(--accent);
+    font-size: 1.5rem;             /* Large placeholder icon */
+    color: var(--accent);          /* Blue accent color */
 }
 
+/* ADVISORY TEXT INFORMATION */
 .advisory-info {
-    flex: 1;
+    flex: 1;                       /* Take remaining space */
 }
 
+/* ADVISORY ROLE TITLE */
 .advisory-title {
     font-size: 1.125rem;
     font-weight: 700;
-    color: var(--text-dark);
+    color: var(--text-dark);       /* Dark for readability */
     margin-bottom: 0.25rem;
-    line-height: 1.3;
+    line-height: 1.3;              /* Tight line height for titles */
 }
 
+/* ADVISORY ORGANIZATION NAME */
 .advisory-organization {
     font-size: 0.875rem;
-    color: var(--accent);
+    color: var(--accent);          /* Blue accent color */
     font-weight: 600;
     margin-bottom: 0.5rem;
 }
 
+/* ADVISORY ROLE BADGE */
 .advisory-role {
     display: inline-block;
-    background: var(--accent-lighter);
-    color: var(--primary-dark);
+    background: var(--accent-lighter); /* Light blue background */
+    color: var(--primary-dark);    /* Dark navy text */
     padding: 0.25rem 0.75rem;
-    border-radius: 1rem;
-    font-size: 0.75rem;
+    border-radius: 1rem;           /* Pill shape */
+    font-size: 0.75rem;            /* Small text */
     font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
+    text-transform: uppercase;     /* All caps */
+    letter-spacing: 0.05em;        /* Spaced letters */
 }
 
+/* ADVISORY ROLE DESCRIPTION */
 .advisory-description {
-    color: var(--text-light);
-    line-height: 1.6;
+    color: var(--text-light);      /* Readable gray */
+    line-height: 1.6;              /* Comfortable spacing */
     margin-bottom: 1.5rem;
     font-size: 0.9rem;
-    text-align: justify;
+    text-align: justify;           /* Clean edges */
 }
 
+/* ADVISORY ACTION LINKS */
 .advisory-links {
     display: flex;
-    gap: 0.75rem;
-    flex-wrap: wrap;
+    gap: 0.75rem;                  /* Space between links */
+    flex-wrap: wrap;               /* Wrap on small screens */
 }
 
+/* INDIVIDUAL ADVISORY LINK */
 .advisory-link {
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.5rem;                   /* Space between icon and text */
     padding: 0.5rem 1rem;
-    background: var(--light-gray);
-    color: var(--primary);
+    background: var(--light-gray); /* Light background */
+    color: var(--primary);         /* Navy text */
     text-decoration: none;
-    border-radius: 0.5rem;
-    font-size: 0.75rem;
+    border-radius: 0.5rem;         /* Rounded corners */
+    font-size: 0.75rem;            /* Small text */
     font-weight: 600;
-    transition: all 0.2s ease;
+    transition: all 0.2s ease;     /* Smooth hover effects */
     border: 1px solid var(--border-gray);
 }
 
+/* ADVISORY LINK HOVER EFFECT */
 .advisory-link:hover {
-    background: var(--accent);
-    color: white;
-    transform: translateY(-1px);
-    box-shadow: var(--shadow-sm);
+    background: var(--accent);     /* Blue background on hover */
+    color: white;                  /* White text on hover */
+    transform: translateY(-1px);   /* Slight lift */
+    box-shadow: var(--shadow-sm);  /* Subtle shadow */
 }
 
 .advisory-link i {
-    font-size: 0.75rem;
+    font-size: 0.75rem;            /* Small icons */
 }
 
-/* Section Dividers */
+/* 
+==============================================
+SECTION DIVIDERS
+==============================================
+Decorative headers for sub-sections within main sections
+*/
 .section-divider {
     text-align: center;
-    margin: 2rem 0;
+    margin: 2rem 0;                /* Vertical spacing */
 }
 
+/* SECTION DIVIDER TITLE */
 .section-divider h3 {
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--primary);
+    color: var(--primary);         /* Navy color */
     margin-bottom: 0.5rem;
     position: relative;
     display: inline-block;
 }
 
+/* DECORATIVE UNDERLINE FOR DIVIDER */
 .section-divider h3::after {
     content: '';
     position: absolute;
-    bottom: -0.5rem;
+    bottom: -0.5rem;               /* Position below text */
     left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
+    transform: translateX(-50%);   /* Center the line */
+    width: 60px;                   /* Fixed width */
     height: 2px;
-    background: var(--gradient);
+    background: var(--gradient);   /* Brand gradient */
 }
 
-/* Blog Section */
+/* 
+==============================================
+BLOG SECTION
+==============================================
+Blog posts and publications showcase
+*/
 .blogs {
-    background: var(--warm-background);
+    background: var(--warm-background); /* Warm beige background */
 }
 
+/* BLOG POSTS GRID LAYOUT */
 .blog-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Responsive grid */
+    gap: 2rem;                     /* Space between cards */
 }
 
+/* INDIVIDUAL BLOG POST CARD */
 .blog-card {
-    background: var(--card-white);
-    border-radius: 1rem;
-    overflow: hidden;
-    box-shadow: var(--shadow);
-    transition: all 0.2s ease;
+    background: var(--card-white); /* White background */
+    border-radius: 1rem;           /* Rounded corners */
+    overflow: hidden;              /* Hide overflow for clean edges */
+    box-shadow: var(--shadow);     /* Depth with shadow */
+    transition: all 0.2s ease;     /* Smooth hover effects */
     border: 1px solid var(--border-gray);
 }
 
+/* BLOG CARD HOVER EFFECT */
 .blog-card:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-lg);
+    transform: translateY(-3px);   /* Lift effect */
+    box-shadow: var(--shadow-lg);  /* Enhanced shadow */
 }
 
+/* BLOG POST IMAGE/ICON AREA */
 .blog-image {
-    height: 160px;
-    background: var(--gradient-accent);
+    height: 160px;                 /* Fixed height for consistency */
+    background: var(--gradient-accent); /* Blue gradient background */
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
-    font-size: 2rem;
+    font-size: 2rem;               /* Large icon */
 }
 
+/* BLOG CARD CONTENT AREA */
 .blog-content {
-    padding: 1.5rem;
+    padding: 1.5rem;               /* Internal spacing */
 }
 
+/* BLOG POST CATEGORY BADGE */
 .blog-category {
-    background: var(--accent-lighter);
-    color: var(--primary-dark);
+    background: var(--accent-lighter); /* Light blue background */
+    color: var(--primary-dark);    /* Dark navy text */
     padding: 0.25rem 0.75rem;
-    border-radius: 1rem;
-    font-size: 0.75rem;
+    border-radius: 1rem;           /* Pill shape */
+    font-size: 0.75rem;            /* Small text */
     font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
+    text-transform: uppercase;     /* All caps */
+    letter-spacing: 0.05em;        /* Spaced letters */
     display: inline-block;
     margin-bottom: 1rem;
 }
 
+/* BLOG POST TITLE */
 .blog-title {
     font-size: 1.125rem;
     font-weight: 700;
     margin-bottom: 0.75rem;
-    color: var(--text-dark);
+    color: var(--text-dark);       /* Dark for readability */
 }
 
+/* BLOG POST EXCERPT */
 .blog-excerpt {
     font-size: 0.875rem;
-    color: var(--text-light);
-    line-height: 1.6;
+    color: var(--text-light);      /* Readable gray */
+    line-height: 1.6;              /* Comfortable spacing */
     margin-bottom: 1rem;
-    text-align: justify;
+    text-align: justify;           /* Clean edges */
 }
 
+/* BLOG POST META INFO - Publication and read link */
 .blog-meta {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Spread publication and link */
     align-items: center;
-    font-size: 0.75rem;
-    color: var(--text-lighter);
+    font-size: 0.75rem;            /* Small meta text */
+    color: var(--text-lighter);    /* Light gray */
 }
 
-/* Achievements Section */
+/* 
+==============================================
+ACHIEVEMENTS SECTION
+==============================================
+Awards and recognition timeline
+*/
 .achievements {
-    background: var(--text-dark);
-    color: var(--card-white);
+    background: var(--text-dark);  /* Dark background for contrast */
+    color: var(--card-white);      /* White text on dark background */
 }
 
+/* ACHIEVEMENTS SECTION TITLE - Special gradient text */
 .achievements .section-title {
     background: linear-gradient(135deg, var(--card-white) 0%, var(--accent-light) 100%);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent; /* Gradient text effect */
     background-clip: text;
 }
 
+/* ACHIEVEMENTS SECTION SUBTITLE */
 .achievements .section-subtitle {
-    color: var(--gray-400);
+    color: var(--gray-400);        /* Light gray on dark background */
 }
 
+/* TIMELINE CONTAINER */
 .timeline {
     position: relative;
-    max-width: 800px;
-    margin: 0 auto;
+    max-width: 800px;              /* Readable content width */
+    margin: 0 auto;                /* Center the timeline */
 }
 
+/* TIMELINE VERTICAL LINE */
 .timeline::before {
     content: '';
     position: absolute;
-    left: 2rem;
+    left: 2rem;                    /* Position from left edge */
     top: 0;
     bottom: 0;
-    width: 2px;
-    background: var(--gradient);
+    width: 2px;                    /* Thin line */
+    background: var(--gradient);   /* Brand gradient */
 }
 
+/* INDIVIDUAL TIMELINE ITEM */
 .timeline-item {
     position: relative;
-    margin-bottom: 3rem;
-    padding-left: 5rem;
+    margin-bottom: 3rem;           /* Space between items */
+    padding-left: 5rem;            /* Space for timeline elements */
 }
 
+/* TIMELINE ITEM DOT */
 .timeline-item::before {
     content: '';
     position: absolute;
-    left: 1.5rem;
+    left: 1.5rem;                  /* Position on timeline */
     top: 0.5rem;
     width: 1rem;
     height: 1rem;
-    background: var(--accent);
-    border-radius: 50%;
-    border: 3px solid var(--text-dark);
+    background: var(--accent);     /* Blue dot */
+    border-radius: 50%;            /* Circular dot */
+    border: 3px solid var(--text-dark); /* Dark border */
 }
 
+/* TIMELINE YEAR BADGE */
 .timeline-year {
-    background: var(--gradient);
+    background: var(--gradient);   /* Brand gradient background */
     color: white;
     padding: 0.5rem 1rem;
-    border-radius: 2rem;
-    font-size: 0.875rem;
+    border-radius: 2rem;           /* Pill shape */
+    font-size: 0.875rem;           /* Small text */
     font-weight: 700;
     display: inline-block;
     margin-bottom: 1rem;
 }
 
+/* TIMELINE ITEM TITLE */
 .timeline-content h3 {
     font-size: 1.25rem;
     font-weight: 700;
     margin-bottom: 0.75rem;
-    color: var(--card-white);
+    color: var(--card-white);      /* White text */
 }
 
+/* TIMELINE ITEM DESCRIPTION */
 .timeline-content p {
-    color: var(--gray-400);
-    line-height: 1.6;
-    text-align: justify;
+    color: var(--gray-400);        /* Light gray text */
+    line-height: 1.6;              /* Comfortable spacing */
+    text-align: justify;           /* Clean edges */
 }
 
-/* Contact Section - Fixed */
+/* 
+==============================================
+CONTACT SECTION
+==============================================
+Contact form and contact information
+*/
 .contact {
-    background: var(--soft-beige);
+    background: var(--soft-beige); /* Soft beige background */
 }
 
+/* CONTACT CONTENT LAYOUT - Two column grid */
 .contact-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: start;
+    grid-template-columns: 1fr 1fr; /* Equal width columns */
+    gap: 4rem;                     /* Large gap between columns */
+    align-items: start;            /* Align to top */
 }
 
+/* CONTACT INFO SECTION TITLE */
 .contact-info h3 {
     font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    color: var(--text-dark);
+    color: var(--text-dark);       /* Dark for readability */
 }
 
+/* CONTACT INFO DESCRIPTION */
 .contact-info p {
-    color: var(--text-light);
+    color: var(--text-light);      /* Readable gray */
     margin-bottom: 2rem;
-    line-height: 1.7;
-    text-align: justify;
+    line-height: 1.7;              /* Generous line height */
+    text-align: justify;           /* Clean edges */
 }
 
+/* CONTACT METHODS CONTAINER */
 .contact-methods {
     display: flex;
-    flex-direction: column;
-    gap: 1rem;
+    flex-direction: column;        /* Stack contact methods vertically */
+    gap: 1rem;                     /* Space between methods */
     margin-bottom: 2rem;
 }
 
+/* INDIVIDUAL CONTACT METHOD CARD */
 .contact-method {
-    background: var(--card-white);
+    background: var(--card-white); /* White background */
     padding: 1.5rem;
-    border-radius: 1rem;
-    transition: all 0.2s ease;
+    border-radius: 1rem;           /* Rounded corners */
+    transition: all 0.2s ease;     /* Smooth hover effects */
     border: 1px solid var(--border-gray);
-    box-shadow: var(--shadow-sm);
+    box-shadow: var(--shadow-sm);  /* Subtle shadow */
 }
 
+/* CONTACT METHOD HOVER EFFECT */
 .contact-method:hover {
-    box-shadow: var(--shadow);
-    transform: translateY(-2px);
+    box-shadow: var(--shadow);     /* Enhanced shadow */
+    transform: translateY(-2px);   /* Slight lift */
 }
 
+/* CONTACT METHOD TITLE WITH ICON */
 .contact-method h4 {
     font-size: 1rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
-    color: var(--text-dark);
+    color: var(--text-dark);       /* Dark for readability */
     display: flex;
     align-items: center;
-    gap: 0.75rem;
+    gap: 0.75rem;                  /* Space between icon and text */
 }
 
 .contact-method h4 i {
-    font-size: 1.125rem;
-    color: var(--accent);
+    font-size: 1.125rem;           /* Slightly larger icons */
+    color: var(--accent);          /* Blue accent color */
 }
 
+/* CONTACT METHOD DESCRIPTION */
 .contact-method p {
     font-size: 0.875rem;
-    color: var(--text-light);
+    color: var(--text-light);      /* Readable gray */
     margin-bottom: 0.75rem;
-    text-align: left;
+    text-align: left;              /* Override justify for contact info */
 }
 
+/* CONTACT METHOD LINK */
 .contact-method a {
-    color: var(--accent);
+    color: var(--accent);          /* Blue accent color */
     text-decoration: none;
     font-weight: 600;
     font-size: 0.875rem;
 }
 
 .contact-method a:hover {
-    text-decoration: underline;
+    text-decoration: underline;    /* Underline on hover */
 }
 
-/* Contact Form Styles */
+/* 
+==============================================
+CONTACT FORM
+==============================================
+Contact form styling and input elements
+*/
 .contact-form {
-    background: var(--card-white);
+    background: var(--card-white); /* White background */
     padding: 2rem;
-    border-radius: 1rem;
-    box-shadow: var(--shadow);
+    border-radius: 1rem;           /* Rounded corners */
+    box-shadow: var(--shadow);     /* Depth with shadow */
     border: 1px solid var(--border-gray);
-    height: fit-content;
+    height: fit-content;           /* Don't stretch unnecessarily */
 }
 
+/* FORM GROUP - Individual form field container */
 .form-group {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.5rem;         /* Space between form fields */
 }
 
+/* FORM LABELS */
 .form-group label {
     display: block;
     margin-bottom: 0.5rem;
     font-weight: 600;
-    color: var(--text-dark);
-    font-size: 0.875rem;
+    color: var(--text-dark);       /* Dark for readability */
+    font-size: 0.875rem;           /* Slightly smaller than body text */
 }
 
+/* FORM INPUTS - Text, email, select, textarea */
 .form-group input,
 .form-group select,
 .form-group textarea {
-    width: 100%;
+    width: 100%;                   /* Full width of container */
     padding: 0.75rem;
-    border: 2px solid var(--border-gray);
-    border-radius: 0.5rem;
+    border: 2px solid var(--border-gray); /* Light gray border */
+    border-radius: 0.5rem;         /* Rounded corners */
     font-size: 0.875rem;
-    color: var(--text-medium);
-    background: var(--card-white);
-    transition: border-color 0.2s ease;
+    color: var(--text-medium);     /* Dark text */
+    background: var(--card-white); /* White background */
+    transition: border-color 0.2s ease; /* Smooth border transitions */
 }
 
+/* FORM INPUT FOCUS STATE */
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
-    outline: none;
-    border-color: var(--accent);
-    box-shadow: 0 0 0 3px rgba(74, 108, 247, 0.1);
+    outline: none;                 /* Remove default browser outline */
+    border-color: var(--accent);   /* Blue border on focus */
+    box-shadow: 0 0 0 3px rgba(74, 108, 247, 0.1); /* Blue glow effect */
 }
 
+/* TEXTAREA SPECIFIC STYLING */
 .form-group textarea {
-    min-height: 120px;
-    resize: vertical;
+    min-height: 120px;             /* Minimum height for message area */
+    resize: vertical;              /* Allow vertical resize only */
 }
 
+/* FORM SUBMIT BUTTON */
 .form-group button {
-    width: 100%;
+    width: 100%;                   /* Full width button */
     margin-top: 0.5rem;
 }
 
-/* Footer */
+/* IMAGE TAGLINE SUBTITLE */
+.tagline {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.2;
+    margin-top: 0px;
+  }
+
+/* 
+==============================================
+FOOTER
+==============================================
+Site footer with copyright information
+*/
 .footer {
-    background: var(--text-dark);
-    color: var(--gray-400);
+    background: var(--text-dark);  /* Dark background */
+    color: var(--gray-400);        /* Light gray text */
     text-align: center;
-    padding: 2rem 0;
-    border-top: 1px solid var(--gray-800);
+    padding: 2rem 0;               /* Vertical padding */
+    border-top: 1px solid var(--gray-800); /* Subtle top border */
 }
 
 .footer p {
-    font-size: 0.875rem;
-    margin: 0;
+    font-size: 0.875rem;           /* Smaller footer text */
+    margin: 0;                     /* No margin */
 }
 
-/* Responsive Design */
+/* 
+==============================================
+RESPONSIVE DESIGN
+==============================================
+Media queries for different screen sizes
+*/
+
+/* TABLET LANDSCAPE - 1024px and below */
 @media (max-width: 1024px) {
+    /* Hero section becomes single column */
     .hero-content {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-        text-align: center;
+        grid-template-columns: 1fr;  /* Single column layout */
+        gap: 3rem;                   /* Reduced gap */
+        text-align: center;          /* Center align content */
     }
     
+    /* Smaller hero profile card */
     .hero-image {
         width: 400px;
         height: 480px;
     }
     
+    /* Contact section becomes single column */
     .contact-content {
-        grid-template-columns: 1fr;
-        gap: 3rem;
+        grid-template-columns: 1fr;  /* Single column layout */
+        gap: 3rem;                   /* Reduced gap */
     }
     
+    /* About stats become 2 columns instead of 4 */
     .about-stats {
         grid-template-columns: repeat(2, 1fr);
     }
     
+    /* Hide navigation links, show mobile menu */
     .nav-links {
         display: none;
     }
     
     .menu-toggle {
-        display: block;
+        display: block;              /* Show hamburger menu */
     }
 }
 
+/* TABLET PORTRAIT - 768px and below */
 @media (max-width: 768px) {
+    /* Reduce hero section padding */
     .hero {
-        padding: 5rem 0 3rem;
+        padding: 5rem 0 3rem;       /* Less vertical padding */
     }
     
+    /* Smaller hero title */
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 2.5rem;          /* Reduced from 3.5rem */
     }
     
+    /* Smaller hero profile card */
     .hero-image {
         width: 350px;
         height: 420px;
     }
     
     .hero-card {
-        padding: 2.5rem;
+        padding: 2.5rem;            /* Less padding */
     }
     
+    /* Smaller profile image */
     .profile-image {
         width: 160px;
         height: 160px;
-        font-size: 3.5rem;
+        font-size: 3.5rem;          /* Smaller placeholder text */
     }
     
+    /* Adjust hero card text sizes */
     .hero-card h2 {
-        font-size: 1.75rem;
+        font-size: 1.75rem;         /* Smaller name text */
     }
     
     .hero-card .subtitle {
-        font-size: 1rem;
+        font-size: 1rem;            /* Smaller subtitle */
     }
     
+    /* Smaller social icons */
     .social-link {
         width: 3rem;
         height: 3rem;
         font-size: 1.125rem;
     }
     
+    /* Reduce section padding */
     .section {
-        padding: 3rem 0;
+        padding: 3rem 0;            /* Less vertical padding */
     }
     
+    /* Smaller section titles */
     .section-title {
-        font-size: 2rem;
+        font-size: 2rem;            /* Reduced from 2.5rem */
     }
     
+    /* Less contact form padding */
     .contact-form {
         padding: 1.5rem;
     }
     
+    /* About stats become single column */
     .about-stats {
         grid-template-columns: 1fr;
     }
     
+    /* Stack hero stats vertically */
     .hero-stats {
-        flex-direction: column;
-        gap: 1rem;
+        flex-direction: column;     /* Vertical stack */
+        gap: 1rem;                  /* Reduced gap */
     }
     
+    /* All grids become single column */
     .expertise-grid,
     .speaking-grid,
     .advisory-row,
@@ -1293,43 +1534,50 @@ p {
         grid-template-columns: 1fr;
     }
     
+    /* Adjust timeline for mobile */
     .timeline::before {
-        left: 1rem;
+        left: 1rem;                 /* Move timeline line closer */
     }
     
     .timeline-item {
-        padding-left: 3rem;
+        padding-left: 3rem;         /* Less left padding */
     }
     
     .timeline-item::before {
-        left: 0.5rem;
+        left: 0.5rem;              /* Adjust dot position */
     }
 }
 
+/* MOBILE PHONES - 480px and below */
 @media (max-width: 480px) {
+    /* Reduce container padding */
     .container {
-        padding: 0 0.75rem;
+        padding: 0 0.75rem;         /* Less horizontal padding */
     }
     
+    /* Much smaller hero title */
     .hero-title {
-        font-size: 2rem;
+        font-size: 2rem;            /* Significantly reduced */
     }
     
+    /* Smaller hero profile card */
     .hero-image {
         width: 300px;
         height: 380px;
     }
     
     .hero-card {
-        padding: 2rem;
+        padding: 2rem;              /* Less padding */
     }
     
+    /* Smaller profile image */
     .profile-image {
         width: 140px;
         height: 140px;
-        font-size: 3rem;
+        font-size: 3rem;            /* Smaller placeholder text */
     }
     
+    /* Smaller hero card text */
     .hero-card h2 {
         font-size: 1.5rem;
     }
@@ -1338,20 +1586,24 @@ p {
         font-size: 0.9rem;
     }
     
+    /* Smaller social icons */
     .social-link {
         width: 2.75rem;
         height: 2.75rem;
         font-size: 1rem;
     }
     
+    /* Smaller section titles */
     .section-title {
         font-size: 1.75rem;
     }
     
+    /* Less contact form padding */
     .contact-form {
         padding: 1rem;
     }
     
+    /* Smaller buttons */
     .btn {
         padding: 0.625rem 1.25rem;
         font-size: 0.8rem;
