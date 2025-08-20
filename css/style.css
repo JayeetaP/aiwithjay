@@ -2560,10 +2560,7 @@ No JavaScript required - works with pure CSS
     box-shadow: 0 8px 25px rgba(74, 108, 247, 0.4);
 }
 
-/* When checkbox is checked (dark mode) */
-.theme-toggle-checkbox:checked ~ * {
-    /* Apply dark mode to all elements */
-}
+/* When checkbox is checked (dark mode) - styles handled by :has() selector below */
 
 .theme-toggle-checkbox:checked + .theme-toggle-label .theme-toggle-button {
     background: var(--gray-700);
