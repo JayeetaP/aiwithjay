@@ -124,7 +124,8 @@ p {
 .hero-card p,
 .stat-label,
 .about-stat-label,
-.footer p {
+.footer p,
+.contact-quick-content p {
     text-align: center !important; /* Override justify for centered content */
 }
 
