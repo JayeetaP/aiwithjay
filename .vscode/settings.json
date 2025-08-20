@@ -4,6 +4,6 @@
     "emmet.includeLanguages": {
         "javascript": "javascriptreact"
     },
-    "liveServer.settings.port": 3000,
+    "liveServer.settings.port": 3001,
     "git.autofetch": true
 }

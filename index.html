@@ -73,16 +73,7 @@
                         </div>
                     </div>
                     
-                    <div class="hero-cta">
-                        <a href="https://topmate.io/jayeeta_putatunda" target="_blank" class="btn btn-primary">
-                            <i class="fas fa-calendar"></i>
-                            Book Free 1:1 Mentorship
-                        </a>
-                        <a href="#speaking" class="btn btn-secondary">
-                            <i class="fas fa-microphone"></i>
-                            View My Talks
-                        </a>
-                    </div>
+
                 </div>
                 
                 <div class="hero-image">
@@ -110,8 +101,26 @@
                             </a>
                         </div>
                     </div>
+                    
+                    <!-- CTA Buttons - Outside the card -->
+                    <div class="hero-cta-right">
+                        <a href="https://topmate.io/jayeeta_putatunda" target="_blank" class="btn btn-primary">
+                            <i class="fas fa-calendar"></i>
+                            Book Mentorship
+                        </a>
+                        <a href="#speaking" class="btn btn-secondary">
+                            <i class="fas fa-microphone"></i>
+                            View My Talks
+                        </a>
+                    </div>
                 </div>
             </div>
+        </div>
+        
+        <!-- Scroll Down Indicator -->
+        <div class="scroll-indicator" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">
+            <span>Scroll Down</span>
+            <i class="fas fa-chevron-down"></i>
         </div>
     </section>
 
@@ -259,54 +268,98 @@
             <div class="section-header">
                 <h2 class="section-title">Speaking Engagements</h2>
                 <p class="section-subtitle">Global thought leadership across premier AI and tech conferences</p>
+                
+                <!-- Speaking Stats -->
+                <div class="speaking-stats">
+                    <div class="speaking-stat">
+                        <span class="stat-number">40+</span>
+                        <span class="stat-label">Tech Talks</span>
+                    </div>
+                    <div class="speaking-stat">
+                        <span class="stat-number">15+</span>
+                        <span class="stat-label">Global Conferences</span>
+                    </div>
+                    <div class="speaking-stat">
+                        <span class="stat-number">5+</span>
+                        <span class="stat-label">Countries</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Filter/Navigation for Years -->
+            <div class="year-navigation">
+                <button class="year-nav-btn active" data-year="all">All Years</button>
+                <button class="year-nav-btn" data-year="2025">2025</button>
+                <button class="year-nav-btn" data-year="2024">2024</button>
+                <button class="year-nav-btn" data-year="2023">2022-2023</button>
+                <button class="year-nav-btn" data-year="2021">2020-2021</button>
             </div>
             
             <!-- 2025 -->
-            <div class="year-section">
+            <div class="year-section" data-year="2025">
                 <h3 class="year-header">2025</h3>
                 <div class="speaking-grid">
-                    <div class="speaking-card">
-                        <div class="speaking-images">
-                            <i class="fas fa-microphone-alt"></i>
+                    <!-- Compact Speaking Card Template -->
+                    <div class="speaking-card-compact">
+                        <div class="speaking-header">
+                            <div class="speaking-date">
+                                <span class="month">Apr</span>
+                                <span class="year">2025</span>
+                            </div>
+                            <div class="speaking-type">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                                <span>Workshop</span>
+                            </div>
                         </div>
                         <div class="speaking-content">
                             <h4 class="speaking-title">Building AI Agents for Financial Services</h4>
-                            <p class="speaking-description">Hands-on workshop on creating AI agents tailored for financial report analysis, covering agent architecture, implementation, and real-world deployment strategies.</p>
-                            <div class="speaking-meta">
-                                <span>ODSC East 2025</span>
-                                <a href="#" class="speaking-link">
-                                    View Details <i class="fas fa-external-link-alt"></i>
-                                </a>
+                            <p class="speaking-venue">ODSC East 2025 • Boston, MA</p>
+                            <p class="speaking-description">Hands-on workshop on creating AI agents for financial report analysis.</p>
+                            <div class="speaking-actions">
+                                <a href="#" class="btn-link primary">View Details</a>
+                                <a href="#" class="btn-link secondary">Slides</a>
                             </div>
                         </div>
                     </div>
-                    <div class="speaking-card">
-                        <div class="speaking-images">
-                            <i class="fas fa-chart-bar"></i>
+                    <div class="speaking-card-compact">
+                        <div class="speaking-header">
+                            <div class="speaking-date">
+                                <span class="month">Apr</span>
+                                <span class="year">2025</span>
+                            </div>
+                            <div class="speaking-type">
+                                <i class="fas fa-chart-bar"></i>
+                                <span>Talk</span>
+                            </div>
                         </div>
                         <div class="speaking-content">
                             <h4 class="speaking-title">Decoding LLMs: Evaluation is All You Need!</h4>
-                            <p class="speaking-description">Deep dive into LLM evaluation methodologies, performance metrics, and best practices for enterprise deployment of large language models.</p>
-                            <div class="speaking-meta">
-                                <span>ODSC East 2025</span>
-                                <a href="#" class="speaking-link">
-                                    Register <i class="fas fa-external-link-alt"></i>
-                                </a>
+                            <p class="speaking-venue">ODSC East 2025 • Boston, MA</p>
+                            <p class="speaking-description">Deep dive into LLM evaluation methodologies, performance metrics, and best practices for enterprise deployment.</p>
+                            <div class="speaking-actions">
+                                <a href="#" class="btn-link primary">Register</a>
+                                <a href="#" class="btn-link secondary">Details</a>
                             </div>
                         </div>
                     </div>
-                    <div class="speaking-card">
-                        <div class="speaking-images">
-                            <i class="fas fa-network-wired"></i>
+                    <div class="speaking-card-compact">
+                        <div class="speaking-header">
+                            <div class="speaking-date">
+                                <span class="month">Mar</span>
+                                <span class="year">2025</span>
+                            </div>
+                            <div class="speaking-type">
+                                <i class="fas fa-microphone"></i>
+                                <span>Keynote</span>
+                            </div>
                         </div>
                         <div class="speaking-content">
                             <h4 class="speaking-title">Knowledge Graphs with RAG Systems in Finance</h4>
-                            <p class="speaking-description">Exploring the integration of knowledge graphs with Retrieval-Augmented Generation systems for enhanced financial data analysis and decision-making.</p>
-                            <div class="speaking-meta">
-                                <span>WomenTech Global Conference 2025</span>
-                                <a href="#" class="speaking-link">
-                                    Learn More <i class="fas fa-external-link-alt"></i>
-                                </a>
+                            <p class="speaking-venue">WomenTech Global Conference 2025 • Virtual</p>
+                            <p class="speaking-description">Exploring the integration of knowledge graphs with RAG systems for enhanced financial data analysis.</p>
+                            <div class="speaking-actions">
+                                <a href="#" class="btn-link primary">Learn More</a>
+                                <a href="#" class="btn-link secondary">Agenda</a>
                             </div>
                         </div>
                     </div>
@@ -314,51 +367,69 @@
             </div>
 
             <!-- 2024 -->
-            <div class="year-section">
+            <div class="year-section" data-year="2024">
                 <h3 class="year-header">2024</h3>
                 <div class="speaking-grid">
-                    <div class="speaking-card">
-                        <div class="speaking-images">
-                            <i class="fas fa-cogs"></i>
+                    <div class="speaking-card-compact">
+                        <div class="speaking-header">
+                            <div class="speaking-date">
+                                <span class="month">Oct</span>
+                                <span class="year">2024</span>
+                            </div>
+                            <div class="speaking-type">
+                                <i class="fas fa-users"></i>
+                                <span>Panel</span>
+                            </div>
                         </div>
                         <div class="speaking-content">
                             <h4 class="speaking-title">LLMOps: Technical Exploration of Deployed Systems</h4>
-                            <p class="speaking-description">Interactive panel on implementation and optimization of large language models for production environments, covering deployment strategies and performance monitoring.</p>
-                            <div class="speaking-meta">
-                                <span>Generative AI Summit Boston</span>
-                                <a href="#" class="speaking-link">
-                                    Watch Recording <i class="fas fa-external-link-alt"></i>
-                                </a>
+                            <p class="speaking-venue">Generative AI Summit Boston • Boston, MA</p>
+                            <p class="speaking-description">Interactive panel on implementation and optimization of large language models for production environments.</p>
+                            <div class="speaking-actions">
+                                <a href="#" class="btn-link primary">Watch Recording</a>
+                                <a href="#" class="btn-link secondary">Summary</a>
                             </div>
                         </div>
                     </div>
-                    <div class="speaking-card">
-                        <div class="speaking-images">
-                            <i class="fas fa-gavel"></i>
+                    <div class="speaking-card-compact">
+                        <div class="speaking-header">
+                            <div class="speaking-date">
+                                <span class="month">Nov</span>
+                                <span class="year">2024</span>
+                            </div>
+                            <div class="speaking-type">
+                                <i class="fas fa-gavel"></i>
+                                <span>Judge</span>
+                            </div>
                         </div>
                         <div class="speaking-content">
                             <h4 class="speaking-title">Congressional App Challenge - Panel Judge</h4>
-                            <p class="speaking-description">Served as panel judge for the 8th Congressional App Challenge hosted by US Congress, evaluating innovative mobile applications developed by high school students.</p>
-                            <div class="speaking-meta">
-                                <span>US Congress</span>
-                                <a href="#" class="speaking-link">
-                                    Event Info <i class="fas fa-external-link-alt"></i>
-                                </a>
+                            <p class="speaking-venue">US Congress • Washington, DC</p>
+                            <p class="speaking-description">Panel judge for the 8th Congressional App Challenge, evaluating innovative mobile applications by high school students.</p>
+                            <div class="speaking-actions">
+                                <a href="#" class="btn-link primary">Event Info</a>
+                                <a href="#" class="btn-link secondary">Results</a>
                             </div>
                         </div>
                     </div>
-                    <div class="speaking-card">
-                        <div class="speaking-images">
-                            <i class="fas fa-brain"></i>
+                    <div class="speaking-card-compact">
+                        <div class="speaking-header">
+                            <div class="speaking-date">
+                                <span class="month">Dec</span>
+                                <span class="year">2024</span>
+                            </div>
+                            <div class="speaking-type">
+                                <i class="fas fa-gavel"></i>
+                                <span>Judge</span>
+                            </div>
                         </div>
                         <div class="speaking-content">
                             <h4 class="speaking-title">NeurIPS 2024 Judge</h4>
-                            <p class="speaking-description">Selected as judge for NeurIPS 2024, one of the most prestigious machine learning conferences, evaluating cutting-edge research in neural information processing.</p>
-                            <div class="speaking-meta">
-                                <span>NeurIPS 2024</span>
-                                <a href="#" class="speaking-link">
-                                    Conference <i class="fas fa-external-link-alt"></i>
-                                </a>
+                            <p class="speaking-venue">NeurIPS 2024 • Vancouver, Canada</p>
+                            <p class="speaking-description">Selected as judge for NeurIPS 2024, evaluating cutting-edge research in neural information processing.</p>
+                            <div class="speaking-actions">
+                                <a href="#" class="btn-link primary">Conference</a>
+                                <a href="#" class="btn-link secondary">Papers</a>
                             </div>
                         </div>
                     </div>
@@ -366,51 +437,69 @@
             </div>
 
             <!-- 2022-2023 -->
-            <div class="year-section">
+            <div class="year-section" data-year="2023">
                 <h3 class="year-header">2022-2023</h3>
                 <div class="speaking-grid">
-                    <div class="speaking-card">
-                        <div class="speaking-images">
-                            <i class="fas fa-graduation-cap"></i>
+                    <div class="speaking-card-compact">
+                        <div class="speaking-header">
+                            <div class="speaking-date">
+                                <span class="month">Jul</span>
+                                <span class="year">2022</span>
+                            </div>
+                            <div class="speaking-type">
+                                <i class="fas fa-graduation-cap"></i>
+                                <span>Research</span>
+                            </div>
                         </div>
                         <div class="speaking-content">
                             <h4 class="speaking-title">International Conference on Machine Learning</h4>
-                            <p class="speaking-description">Presented cutting-edge research in machine learning and AI applications at one of the most prestigious academic venues in artificial intelligence.</p>
-                            <div class="speaking-meta">
-                                <span>ICML 2022</span>
-                                <a href="#" class="speaking-link">
-                                    Paper <i class="fas fa-external-link-alt"></i>
-                                </a>
+                            <p class="speaking-venue">ICML 2022 • Baltimore, MD</p>
+                            <p class="speaking-description">Presented cutting-edge research in machine learning and AI applications at one of the most prestigious academic venues.</p>
+                            <div class="speaking-actions">
+                                <a href="#" class="btn-link primary">Paper</a>
+                                <a href="#" class="btn-link secondary">Slides</a>
                             </div>
                         </div>
                     </div>
-                    <div class="speaking-card">
-                        <div class="speaking-images">
-                            <i class="fas fa-chart-line"></i>
+                    <div class="speaking-card-compact">
+                        <div class="speaking-header">
+                            <div class="speaking-date">
+                                <span class="month">Nov</span>
+                                <span class="year">2022</span>
+                            </div>
+                            <div class="speaking-type">
+                                <i class="fas fa-microphone"></i>
+                                <span>Keynote</span>
+                            </div>
                         </div>
                         <div class="speaking-content">
                             <h4 class="speaking-title">AI in Finance: Path Forward</h4>
-                            <p class="speaking-description">Keynote presentation on the current state and future trajectory of AI in financial services, delivered to 150+ attendees at The Theater Center on Broadway.</p>
-                            <div class="speaking-meta">
-                                <span>Data Science Salon NYC 2022</span>
-                                <a href="#" class="speaking-link">
-                                    Slides <i class="fas fa-external-link-alt"></i>
-                                </a>
+                            <p class="speaking-venue">Data Science Salon NYC 2022 • New York, NY</p>
+                            <p class="speaking-description">Keynote on the current state and future trajectory of AI in financial services, delivered to 150+ attendees.</p>
+                            <div class="speaking-actions">
+                                <a href="#" class="btn-link primary">Slides</a>
+                                <a href="#" class="btn-link secondary">Recording</a>
                             </div>
                         </div>
                     </div>
-                    <div class="speaking-card">
-                        <div class="speaking-images">
-                            <i class="fas fa-award"></i>
+                    <div class="speaking-card-compact">
+                        <div class="speaking-header">
+                            <div class="speaking-date">
+                                <span class="month">Dec</span>
+                                <span class="year">2023</span>
+                            </div>
+                            <div class="speaking-type">
+                                <i class="fas fa-gavel"></i>
+                                <span>Judge</span>
+                            </div>
                         </div>
                         <div class="speaking-content">
                             <h4 class="speaking-title">AI Journal Global Excellence Awards Judge</h4>
-                            <p class="speaking-description">Served as judge for The AI Journal Global Excellence Awards 2023, evaluating outstanding achievements in artificial intelligence across various industries.</p>
-                            <div class="speaking-meta">
-                                <span>AI Journal Awards 2023</span>
-                                <a href="#" class="speaking-link">
-                                    Awards <i class="fas fa-external-link-alt"></i>
-                                </a>
+                            <p class="speaking-venue">AI Journal Awards 2023 • London, UK</p>
+                            <p class="speaking-description">Judge for The AI Journal Global Excellence Awards 2023, evaluating outstanding achievements in AI across industries.</p>
+                            <div class="speaking-actions">
+                                <a href="#" class="btn-link primary">Awards</a>
+                                <a href="#" class="btn-link secondary">Winners</a>
                             </div>
                         </div>
                     </div>
@@ -418,36 +507,48 @@
             </div>
 
             <!-- 2020-2021 -->
-            <div class="year-section">
+            <div class="year-section" data-year="2021">
                 <h3 class="year-header">2020-2021</h3>
                 <div class="speaking-grid">
-                    <div class="speaking-card">
-                        <div class="speaking-images">
-                            <i class="fas fa-laptop-code"></i>
+                    <div class="speaking-card-compact">
+                        <div class="speaking-header">
+                            <div class="speaking-date">
+                                <span class="month">Oct</span>
+                                <span class="year">2020</span>
+                            </div>
+                            <div class="speaking-type">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                                <span>Workshop</span>
+                            </div>
                         </div>
                         <div class="speaking-content">
                             <h4 class="speaking-title">Six-Week NLP Webinar Series</h4>
-                            <p class="speaking-description">Led comprehensive introduction to Natural Language Processing series in association with Women Who Code Data Science, covering fundamentals to advanced applications.</p>
-                            <div class="speaking-meta">
-                                <span>Women Who Code 2020</span>
-                                <a href="#" class="speaking-link">
-                                    Series <i class="fas fa-external-link-alt"></i>
-                                </a>
+                            <p class="speaking-venue">Women Who Code 2020 • Virtual</p>
+                            <p class="speaking-description">Led comprehensive introduction to Natural Language Processing series, covering fundamentals to advanced applications.</p>
+                            <div class="speaking-actions">
+                                <a href="#" class="btn-link primary">Series</a>
+                                <a href="#" class="btn-link secondary">Materials</a>
                             </div>
                         </div>
                     </div>
-                    <div class="speaking-card">
-                        <div class="speaking-images">
-                            <i class="fas fa-virus"></i>
+                    <div class="speaking-card-compact">
+                        <div class="speaking-header">
+                            <div class="speaking-date">
+                                <span class="month">Mar</span>
+                                <span class="year">2021</span>
+                            </div>
+                            <div class="speaking-type">
+                                <i class="fas fa-microphone"></i>
+                                <span>Keynote</span>
+                            </div>
                         </div>
                         <div class="speaking-content">
                             <h4 class="speaking-title">How a Virus is Changing Our Perception of Technology</h4>
-                            <p class="speaking-description">Keynote exploring technology's societal transformation during the pandemic, examining accelerated digital adoption and its long-term implications.</p>
-                            <div class="speaking-meta">
-                                <span>WomenTech Global Conference 2021</span>
-                                <a href="#" class="speaking-link">
-                                    Recording <i class="fas fa-external-link-alt"></i>
-                                </a>
+                            <p class="speaking-venue">WomenTech Global Conference 2021 • Virtual</p>
+                            <p class="speaking-description">Keynote exploring technology's societal transformation during the pandemic and accelerated digital adoption.</p>
+                            <div class="speaking-actions">
+                                <a href="#" class="btn-link primary">Recording</a>
+                                <a href="#" class="btn-link secondary">Slides</a>
                             </div>
                         </div>
                     </div>
@@ -988,76 +1089,120 @@
                 <p class="section-subtitle">Let's connect and explore opportunities to collaborate</p>
             </div>
             <div class="contact-content">
+                <!-- Contact Info & Quick Actions -->
                 <div class="contact-info">
-                    <h3>Let's Connect</h3>
-                    <p>Whether you're interested in mentoring, speaking opportunities, advisory roles, or just want to chat about AI and data science, I'd love to hear from you.</p>
+                    <div class="contact-intro">
+                        <h3>Let's Connect</h3>
+                        <p>Whether you're interested in mentoring, speaking opportunities, advisory roles, or collaborating on AI projects, I'd love to hear from you.</p>
+                    </div>
                     
-                    <div class="contact-methods">
-                        <div class="contact-method">
-                            <h4><i class="fas fa-calendar"></i>Mentoring Sessions</h4>
-                            <p>Book a 1:1 mentoring session to discuss your career, projects, or get guidance on AI/ML topics.</p>
-                            <a href="https://topmate.io/jayeeta_putatunda" target="_blank">Book on Topmate</a>
+                    <!-- Quick Contact Grid -->
+                    <div class="contact-quick-grid">
+                        <div class="contact-quick-item">
+                            <div class="contact-quick-icon">
+                                <i class="fas fa-calendar"></i>
+                            </div>
+                            <div class="contact-quick-content">
+                                <h4>1:1 Mentoring</h4>
+                                <p>Career guidance & AI expertise</p>
+                                <a href="https://topmate.io/jayeeta_putatunda" target="_blank" class="contact-quick-link">Book Session</a>
+                            </div>
                         </div>
                         
-                        <div class="contact-method">
-                            <h4><i class="fas fa-envelope"></i>Email</h4>
-                            <p>For speaking engagements, collaboration opportunities, or general inquiries.</p>
-                            <a href="mailto:jayeeta.putatunda@email.com">jayeeta.putatunda@email.com</a>
+                        <div class="contact-quick-item">
+                            <div class="contact-quick-icon">
+                                <i class="fas fa-microphone"></i>
+                            </div>
+                            <div class="contact-quick-content">
+                                <h4>Speaking</h4>
+                                <p>Conferences & events</p>
+                                <a href="#speaking" class="contact-quick-link">View Talks</a>
+                            </div>
                         </div>
                         
-                        <div class="contact-method">
-                            <h4><i class="fab fa-linkedin"></i>LinkedIn</h4>
-                            <p>Connect with me on LinkedIn for professional networking and industry updates.</p>
-                            <a href="https://linkedin.com/in/jayeeta-putatunda" target="_blank">Connect on LinkedIn</a>
+                        <div class="contact-quick-item">
+                            <div class="contact-quick-icon">
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                            <div class="contact-quick-content">
+                                <h4>Advisory</h4>
+                                <p>Strategic consulting</p>
+                                <a href="#advisory" class="contact-quick-link">Learn More</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-quick-item">
+                            <div class="contact-quick-icon">
+                                <i class="fab fa-linkedin"></i>
+                            </div>
+                            <div class="contact-quick-content">
+                                <h4>LinkedIn</h4>
+                                <p>Professional networking</p>
+                                <a href="https://linkedin.com/in/jayeeta-putatunda" target="_blank" class="contact-quick-link">Connect</a>
+                            </div>
                         </div>
                     </div>
                     
-                    <div class="social-links">
-                        <a href="https://linkedin.com/in/jayeeta-putatunda" target="_blank" class="social-link">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="https://twitter.com/jayeetap" target="_blank" class="social-link">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="https://github.com/JayeetaP" target="_blank" class="social-link">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://medium.com/@jayeeta" target="_blank" class="social-link">
-                            <i class="fab fa-medium"></i>
-                        </a>
+
+                    
+                    <!-- Social Links -->
+                    <div class="contact-social">
+                        <h4>Follow My Journey</h4>
+                        <div class="social-links">
+                            <a href="https://linkedin.com/in/jayeeta-putatunda" target="_blank" class="social-link" title="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://twitter.com/jayeetap" target="_blank" class="social-link" title="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://github.com/JayeetaP" target="_blank" class="social-link" title="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://medium.com/@jayeeta" target="_blank" class="social-link" title="Medium">
+                                <i class="fab fa-medium"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 
+                <!-- Contact Form -->
                 <div class="contact-form">
+                    <div class="contact-form-header">
+                        <h3>Send a Message</h3>
+                        <p>I'll get back to you within 24 hours</p>
+                    </div>
+                    
                     <form>
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" required>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" placeholder="Your full name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                            </div>
                         </div>
                         
                         <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="subject">Subject</label>
+                            <label for="subject">What's this about?</label>
                             <select id="subject" name="subject" required>
                                 <option value="">Select a topic</option>
-                                <option value="mentoring">Mentoring</option>
-                                <option value="speaking">Speaking Engagement</option>
-                                <option value="collaboration">Collaboration</option>
-                                <option value="advisory">Advisory Opportunity</option>
-                                <option value="other">Other</option>
+                                <option value="mentoring">🎯 Mentoring Session</option>
+                                <option value="speaking">🎤 Speaking Engagement</option>
+                                <option value="collaboration">🤝 Collaboration</option>
+                                <option value="advisory">💼 Advisory Opportunity</option>
+                                <option value="other">💬 General Inquiry</option>
                             </select>
                         </div>
                         
                         <div class="form-group">
                             <label for="message">Message</label>
-                            <textarea id="message" name="message" placeholder="Tell me about your project, question, or opportunity..." required></textarea>
+                            <textarea id="message" name="message" placeholder="Tell me about your project, question, or opportunity. The more details, the better I can help!" required></textarea>
                         </div>
                         
-                        <button type="submit" class="btn btn-primary">
+                        <button type="submit" class="btn btn-primary btn-full">
                             <i class="fas fa-paper-plane"></i>
                             Send Message
                         </button>
@@ -1074,7 +1219,16 @@
         </div>
     </footer>
 
-    <!-- JavaScript for navigation and interactions -->
-    <script src="js/main.js"></script>
-    </body>
-    </html>
+    <!-- Pure CSS Dark Mode Toggle -->
+    <input type="checkbox" id="theme-toggle" class="theme-toggle-checkbox">
+    <label for="theme-toggle" class="theme-toggle-label">
+        <span class="theme-toggle-button">
+            <span class="moon-icon">🌙</span>
+            <span class="sun-icon">☀️</span>
+        </span>
+    </label>
+
+    <!-- Minimal JavaScript for essential functionality -->
+    <script src="js/minimal.js"></script>
+</body>
+</html>
