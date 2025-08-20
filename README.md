@@ -1,6 +1,6 @@
 # Jayeeta Putatunda - Portfolio Website
 
-Hi! I am Jayeeta!
+Hi! I am Jayeeta :)
 
 ## Live Site
 🌐 [jayeetap.github.io/aiwithjay](https://jayeetap.github.io/aiwithjay/)
