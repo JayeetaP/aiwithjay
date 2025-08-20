@@ -1,6 +1,6 @@
 # Jayeeta Putatunda - Portfolio Website
 
-Professional portfolio showcasing the career of Jayeeta Putatunda, an AI100 Award Winner and Director of AI at Fitch Ratings.
+Hi! I am Jayeeta!
 
 ## Live Site
 🌐 [jayeetap.github.io/aiwithjay](https://jayeetap.github.io/aiwithjay/)
