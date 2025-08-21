@@ -2342,6 +2342,11 @@ Media queries for different screen sizes
 
 /* TABLET LANDSCAPE - 1024px and below */
 @media (max-width: 1024px) {
+    /* Add more space below navigation on tablets */
+    .hero {
+        padding: 8rem 0 4rem;        /* More space below navigation */
+    }
+    
     /* Hero section becomes single column */
     .hero-content {
         grid-template-columns: 1fr;  /* Single column layout */
@@ -2432,7 +2437,8 @@ Media queries for different screen sizes
 @media (max-width: 768px) {
     /* Adjust hero section padding for mobile navigation */
     .hero {
-        padding: 9.5rem 0 3rem;     /* Much more top padding to prevent badge overlap */
+        padding: 11rem 0 4rem;      /* Extra space below navigation */
+        min-height: auto;           /* Allow natural height on mobile */
     }
     
     /* Hide scroll indicator on mobile */
@@ -2494,6 +2500,9 @@ Media queries for different screen sizes
     .hero-cta-right {
         flex-direction: column;        /* Stack vertically on mobile */
         gap: 0.75rem;
+        margin-top: 1.5rem;           /* Ensure spacing from card */
+        width: 100%;                  /* Full width */
+        display: flex !important;     /* Ensure visibility on mobile */
     }
     
     .hero-cta-right .btn {
@@ -2504,6 +2513,9 @@ Media queries for different screen sizes
         flex: none;                   /* Remove flex on mobile */
         height: 4rem;                 /* Even taller height on mobile */
         white-space: normal;          /* Allow text wrapping on mobile */
+        display: flex !important;     /* Ensure button visibility */
+        align-items: center;          /* Center content */
+        justify-content: center;      /* Center content */
     }
     
     /* Reduce section padding */
@@ -2670,7 +2682,8 @@ Media queries for different screen sizes
 @media (max-width: 480px) {
     /* Adjust hero spacing for mobile */
     .hero {
-        padding: 10rem 0 3rem;      /* Much more top padding for small screens */
+        padding: 11.5rem 0 4rem;    /* Maximum space below navigation for small screens */
+        min-height: auto;           /* Allow natural height on mobile */
     }
     
     /* Hide scroll indicator on mobile */
@@ -2698,6 +2711,27 @@ Media queries for different screen sizes
     /* Much smaller hero title */
     .hero-title {
         font-size: 2rem;            /* Significantly reduced */
+    }
+    
+    /* Ensure hero CTA buttons are visible on small mobile */
+    .hero-cta-right {
+        display: flex !important;
+        flex-direction: column;
+        gap: 0.75rem;
+        margin-top: 1rem;
+        width: 100%;
+        align-items: center;
+    }
+    
+    .hero-cta-right .btn {
+        display: flex !important;
+        width: 100%;
+        max-width: 280px;
+        height: 3.5rem;
+        font-size: 0.875rem;
+        padding: 0.875rem 1.25rem;
+        align-items: center;
+        justify-content: center;
     }
     
     /* Smaller hero profile card */
