@@ -955,7 +955,7 @@ Personal story and background information
 .education-content {
     flex: 1;
     text-align: left;
-    padding: 0;
+    padding: 0 0 0 1rem;           /* Add left padding for breathing room */
     margin: 0;
     display: block;
     width: 100%;
@@ -1049,12 +1049,16 @@ Personal story and background information
 
 /* Override any inherited text alignment for education cards */
 .education-card,
-.education-card *,
+.education-card * {
+    text-align: left !important;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+}
+
 .education-content,
 .education-content * {
     text-align: left !important;
     margin-left: 0 !important;
-    padding-left: 0 !important;
 }
 
 /* Exception for achievement badges - they need their own padding */
@@ -2439,11 +2443,11 @@ Media queries for different screen sizes
     /* Smaller hero profile card */
     .hero-image {
         width: 350px;
-        height: 420px;
+        height: 500px;              /* Increased height to prevent cutting */
     }
     
     .hero-card {
-        padding: 2.5rem;            /* Less padding */
+        padding: 2rem 2.5rem;       /* Less top/bottom padding, maintain horizontal */
     }
     
     /* Smaller profile image */
@@ -2572,7 +2576,7 @@ Media queries for different screen sizes
         text-align: left !important;
         width: 100%;
         margin: 0 !important;
-        padding: 0 !important;
+        padding: 0 0 0 1rem !important;    /* Maintain left padding on mobile */
     }
     
     .education-content h4,
@@ -2581,7 +2585,6 @@ Media queries for different screen sizes
     .education-extra {
         text-align: left !important;
         margin-left: 0 !important;
-        padding-left: 0 !important;
     }
     
     .education-extra {
@@ -2665,11 +2668,11 @@ Media queries for different screen sizes
     /* Smaller hero profile card */
     .hero-image {
         width: 300px;
-        height: 380px;
+        height: 450px;              /* Increased height to prevent cutting */
     }
     
     .hero-card {
-        padding: 2rem;              /* Less padding */
+        padding: 1.5rem 2rem;       /* Less top/bottom padding, maintain horizontal */
     }
     
     /* Smaller profile image */
@@ -3164,6 +3167,7 @@ body {
     animation: float 2s ease-in-out infinite;
     cursor: pointer;
     transition: all 0.3s ease;
+    z-index: 10;                   /* Ensure it appears above other elements */
 }
 
 .scroll-indicator:hover {
