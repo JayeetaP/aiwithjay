@@ -2437,8 +2437,8 @@ Media queries for different screen sizes
 @media (max-width: 768px) {
     /* Adjust hero section padding for mobile navigation */
     .hero {
-        padding: 11rem 0 4rem;      /* Extra space below navigation */
-        min-height: auto;           /* Allow natural height on mobile */
+        padding: 11rem 0 5rem;      /* Extra space below navigation, more bottom space */
+        min-height: 100vh;          /* Ensure full screen height */
     }
     
     /* Hide scroll indicator on mobile */
@@ -2499,10 +2499,13 @@ Media queries for different screen sizes
     /* Hero CTA buttons responsive */
     .hero-cta-right {
         flex-direction: column;        /* Stack vertically on mobile */
-        gap: 0.75rem;
-        margin-top: 1.5rem;           /* Ensure spacing from card */
+        gap: 1rem;                    /* More space between buttons */
+        margin-top: 2rem;             /* More spacing from card */
+        margin-bottom: 2rem;          /* Space below buttons */
         width: 100%;                  /* Full width */
         display: flex !important;     /* Ensure visibility on mobile */
+        align-items: center;
+        padding: 0 1rem;              /* Side padding */
     }
     
     .hero-cta-right .btn {
@@ -2513,9 +2516,11 @@ Media queries for different screen sizes
         flex: none;                   /* Remove flex on mobile */
         height: 4rem;                 /* Even taller height on mobile */
         white-space: normal;          /* Allow text wrapping on mobile */
-        display: flex !important;     /* Ensure button visibility */
-        align-items: center;          /* Center content */
-        justify-content: center;      /* Center content */
+        display: block !important;    /* Ensure button visibility */
+        text-align: center;           /* Center text */
+        line-height: 1.3;
+        border-radius: 0.5rem;
+        width: 100%;
     }
     
     /* Reduce section padding */
@@ -2682,8 +2687,8 @@ Media queries for different screen sizes
 @media (max-width: 480px) {
     /* Adjust hero spacing for mobile */
     .hero {
-        padding: 11.5rem 0 4rem;    /* Maximum space below navigation for small screens */
-        min-height: auto;           /* Allow natural height on mobile */
+        padding: 11.5rem 0 5rem;    /* Maximum space below navigation, more bottom space for buttons */
+        min-height: 100vh;          /* Ensure full screen height to accommodate all content */
     }
     
     /* Hide scroll indicator on mobile */
@@ -2717,21 +2722,24 @@ Media queries for different screen sizes
     .hero-cta-right {
         display: flex !important;
         flex-direction: column;
-        gap: 0.75rem;
-        margin-top: 1rem;
+        gap: 1rem;                     /* More space between buttons */
+        margin-top: 1.5rem;            /* More space from profile card */
+        margin-bottom: 2rem;           /* Space below buttons */
         width: 100%;
         align-items: center;
+        padding: 0 1rem;               /* Side padding */
     }
     
     .hero-cta-right .btn {
-        display: flex !important;
+        display: block !important;     /* Ensure both buttons show */
         width: 100%;
         max-width: 280px;
         height: 3.5rem;
         font-size: 0.875rem;
         padding: 0.875rem 1.25rem;
-        align-items: center;
-        justify-content: center;
+        text-align: center;
+        line-height: 1.2;
+        border-radius: 0.5rem;
     }
     
     /* Smaller hero profile card */
@@ -3221,22 +3229,9 @@ body {
     background: linear-gradient(135deg, var(--card-white) 0%, rgba(74, 108, 247, 0.1) 100%);
 }
 
-/* Scroll down indicator */
+/* Scroll down indicator - REMOVED */
 .scroll-indicator {
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    color: var(--text-light);
-    font-size: 0.875rem;
-    animation: float 2s ease-in-out infinite;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    z-index: 10;                   /* Ensure it appears above other elements */
+    display: none !important;      /* Completely hidden */
 }
 
 .scroll-indicator:hover {
