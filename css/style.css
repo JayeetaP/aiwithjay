@@ -2386,13 +2386,49 @@ Media queries for different screen sizes
     .menu-toggle {
         display: block;              /* Show hamburger menu */
     }
+    
+    /* Mobile navigation active state */
+    .nav-links.active {
+        display: flex !important;
+        flex-direction: column;
+        position: fixed;
+        top: 75px;                   /* A bit more space below navbar */
+        left: 0;
+        width: 100%;
+        background: var(--card-white);
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        padding: 1.5rem 0;           /* More padding for better spacing */
+        z-index: 1000;
+    }
+    
+    .nav-links.active li {
+        margin: 0;
+        text-align: center;
+        border-bottom: 1px solid var(--border-gray);
+    }
+    
+    .nav-links.active li:last-child {
+        border-bottom: none;
+    }
+    
+    .nav-links.active .nav-link {
+        display: block;
+        padding: 1.25rem 2rem;      /* More vertical padding */
+        color: var(--text-dark);
+        font-size: 1.1rem;
+        transition: all 0.3s ease;
+    }
+    
+    .nav-links.active .nav-link:hover {
+        background: var(--soft-gray);
+    }
 }
 
 /* TABLET PORTRAIT - 768px and below */
 @media (max-width: 768px) {
-    /* Reduce hero section padding */
+    /* Adjust hero section padding for mobile navigation */
     .hero {
-        padding: 5rem 0 3rem;       /* Less vertical padding */
+        padding: 7rem 0 3rem;       /* More top padding for mobile nav */
     }
     
     /* Smaller hero title */
@@ -2611,6 +2647,11 @@ Media queries for different screen sizes
 
 /* MOBILE PHONES - 480px and below */
 @media (max-width: 480px) {
+    /* Adjust hero spacing for mobile */
+    .hero {
+        padding: 7.5rem 0 3rem;     /* Extra top padding for small screens */
+    }
+    
     /* Reduce container padding */
     .container {
         padding: 0 0.75rem;         /* Less horizontal padding */
@@ -3198,8 +3239,8 @@ No JavaScript required - works with pure CSS
     position: fixed;
     top: 20%;
     right: 20px;
-    width: 60px;
-    height: 60px;
+    width: 45px;
+    height: 45px;
     cursor: pointer;
     z-index: 9999;
     transition: all 0.3s ease;
@@ -3225,7 +3266,7 @@ No JavaScript required - works with pure CSS
 .moon-icon,
 .sun-icon {
     position: absolute;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     transition: all 0.3s ease;
     display: flex;
     align-items: center;
@@ -3604,6 +3645,24 @@ body:has(.theme-toggle-checkbox:checked) .nav-link {
 body:has(.theme-toggle-checkbox:checked) .nav-link:hover,
 body:has(.theme-toggle-checkbox:checked) .nav-link.active {
     color: #60a5fa !important;
+}
+
+/* Dark mode mobile navigation */
+body:has(.theme-toggle-checkbox:checked) .nav-links.active {
+    background: #1e293b !important;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3) !important;
+}
+
+body:has(.theme-toggle-checkbox:checked) .nav-links.active li {
+    border-bottom-color: #475569 !important;
+}
+
+body:has(.theme-toggle-checkbox:checked) .nav-links.active .nav-link {
+    color: #f1f5f9 !important;
+}
+
+body:has(.theme-toggle-checkbox:checked) .nav-links.active .nav-link:hover {
+    background: #334155 !important;
 }
 
 /* Stats and numbers dark mode */
