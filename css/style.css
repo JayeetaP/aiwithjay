@@ -2432,7 +2432,7 @@ Media queries for different screen sizes
 @media (max-width: 768px) {
     /* Adjust hero section padding for mobile navigation */
     .hero {
-        padding: 8rem 0 3rem;       /* Even more top padding to prevent badge overlap */
+        padding: 9.5rem 0 3rem;     /* Much more top padding to prevent badge overlap */
     }
     
     /* Hide scroll indicator on mobile */
@@ -2670,7 +2670,7 @@ Media queries for different screen sizes
 @media (max-width: 480px) {
     /* Adjust hero spacing for mobile */
     .hero {
-        padding: 8.5rem 0 3rem;     /* Extra top padding for small screens */
+        padding: 10rem 0 3rem;      /* Much more top padding for small screens */
     }
     
     /* Hide scroll indicator on mobile */
